@@ -39,7 +39,7 @@
 <meta property="og:image" content="http://example.com/image/1/1644134102182.png">
 <meta property="og:image" content="http://example.com/image/1/1644134117433.png">
 <meta property="article:published_time" content="2022-02-06T08:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-06T12:36:51.493Z">
+<meta property="article:modified_time" content="2022-02-06T12:42:12.472Z">
 <meta property="article:author" content="EML">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/image/1/1644132253127.png">
@@ -206,7 +206,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-06 16:00:00 / 修改时间：20:36:51" itemprop="dateCreated datePublished" datetime="2022-02-06T16:00:00+08:00">2022-02-06</time>
+              <time title="创建时间：2022-02-06 16:00:00 / 修改时间：20:42:12" itemprop="dateCreated datePublished" datetime="2022-02-06T16:00:00+08:00">2022-02-06</time>
             </span>
 
           
@@ -222,7 +222,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k 字</span>
+              <span>2.2k 字</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -267,7 +267,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52796927/article/details/121664227">参考链接</a></p>
-<h2 id="5-善用F12和官方文档自己进行debug"><a href="#5-善用F12和官方文档自己进行debug" class="headerlink" title="5.善用F12和官方文档自己进行debug"></a>5.善用F12和官方文档自己进行debug</h2><p>很多东西网上都有解决方案，但是每个人都有自己的特殊情况，版本对不上，脚本被淘汰，或者电脑特殊一些，都是有可能的，所以有时候就要到官方文档去查询问题的解决办法。官方文档这个词我经常在别人的文章中看到，但是我自己用的比较少，就不讨论了，权当是提醒我自己的一个点，我平常用的比较多的还是F12来看页面的css布局进行debug，前端界面的很多东西都可以通过F12解决，调整界面，或者查询路径是否匹配，我自己就被F12救过两次。</p>
+<h2 id="5-善用F12和官方文档自己进行debug"><a href="#5-善用F12和官方文档自己进行debug" class="headerlink" title="5.善用F12和官方文档自己进行debug"></a>5.善用F12和官方文档自己进行debug</h2><p>很多东西网上都有解决方案，但是每个人都有自己的特殊情况，版本对不上，脚本被淘汰，或者电脑特殊一些，都是有可能的，所以有时候就要到官方文档去查询问题的解决办法。官方文档这个词我经常在别人的文章中看到，但是我自己用的比较少，就不讨论了，权当是提醒我自己的一个点，我平常用的比较多的还是F12来看页面的css布局进行debug，前端界面的很多东西都可以通过F12解决，调整界面，或者查询路径是否匹配，我自己就被F12救过两次，学会自己debug真的很重要！</p>
 <h3 id="（1）背景图片设置与网上教程不同"><a href="#（1）背景图片设置与网上教程不同" class="headerlink" title="（1）背景图片设置与网上教程不同"></a>（1）背景图片设置与网上教程不同</h3><p>网上的教程一般都会教别人在主题设置文件_config中打开style，然后在根目录的resource中创建一个_data文件夹，在_data文件夹中创建一个styl文件，在文件中写好背景图片的属性，放入背景图片的路径，网上教程的路径都是images&#x2F;background.png,我一开始也是这么配置的，但是网页一直没有出现背景图片，网络上也找不到可靠的解决办法，这时候我想起以前写html网页的经历，决定用F12来查看一下，图片的路径到底导入了哪里，找到background路径，我发现路径指向的是css&#x2F;images&#x2F;background.png，我的style的根查询是从css文件夹开始的，和网上所说的从resource文件夹中查询图片的情况是不相符的而我的css文件夹中不存在背景图片，指向了错误的路径，页面自然无法呈现出正确的效果了，之后我修改了style文件，将背景图片的路径设置为..&#x2F;images&#x2F;background.png，成功的显示出了背景图片。</p>
 <p><img src="/image/1/1644149225348.png" alt="本地服务器错误路径"></p>
 <p><img src="/image/1/1644149243785.png" alt="本地服务器正确路径"></p>
